@@ -27,12 +27,13 @@
         var vel = document.getElementById("vel")
         var vel = Number(vel.value)
         var res = document.getElementById('res')
-
+        res.innerHTML = `<p>Sua velocidade atual é de ${vel}km/h.</p>`
+        
         if (vel > 60) {
-          res.innerHTML = `Sua valocidade é ${vel}km/h, maior que o permitido. Enconste por favor!`
-        } else {
-          res.innerHTML = `Sua velocidade é ${vel}km/h, dentro do permitido. Boa viagem!`
+          res.innerHTML += `<p>Acima do permitido. Enconste por favor!</p>`
         }
+        
+        res.innerHTML += `<p>Dirija sempre com cinto de segurança.<p/>`
       }
     </script>
   </body>
