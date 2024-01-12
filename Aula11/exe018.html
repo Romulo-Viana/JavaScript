@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        background-color: rgb(124, 123, 123);
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      <span style="color: red">Fiscalização</span>
+      <span style="color: yellow">de</span>
+      <span style="color: rgb(95, 214, 95)">Trânsito</span>
+    </h1>
+
+    velocidade <input type="number" id="vel" /> km/h
+    <input type="button" value="calcular" onclick="calcular()" />
+    <div id="res">resultado</div>
+
+    <script>
+      function calcular() {
+        var vel = document.getElementById("vel")
+        var vel = Number(vel.value)
+        var res = document.getElementById('res')
+
+        if (vel > 60) {
+          res.innerHTML = `Sua valocidade é ${vel}km/h, maior que o permitido. Enconste por favor!`
+        } else {
+          res.innerHTML = `Sua velocidade é ${vel}km/h, dentro do permitido. Boa viagem!`
+        }
+      }
+    </script>
+  </body>
+</html>

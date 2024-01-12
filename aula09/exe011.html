@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: rgb(68, 125, 199);
+            color: white;
+            font: normal 18pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="msg">Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p name="principal">Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    <div class="d1">Clique em mim</div>
+
+    <script>
+        //Seleção por TagName
+        p1 = document.getElementsByTagName('p')[0]
+        document.write(p1.innerHTML)
+        
+        //Seleção por ID
+        h1 = document.getElementById('msg')
+        document.write(h1.innerText)
+
+        //Seleção por Nome
+        p2 = document.getElementsByName('principal')[0]
+        document.write(p2.innerHTML)
+
+        //Seleção por Classe
+        divs = document.getElementsByClassName('d1')[0]
+        document.write(divs.innerText)
+
+        //Seleção por Seletor OBS: class . ID #
+        selc1 = document.querySelector('h1#msg')
+        selc2 = document.querySelector('div.d1')
+        selc1.style.background = 'black'
+        selc2.style.background = 'blue'
+    </script>
+</body>
+</html>

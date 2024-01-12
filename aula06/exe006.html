@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-size: 100px;
+    }
+  </style>
+</head>
+<body>
+  
+
+  <script>
+      n1 = 1542.3
+      /*Podemos Usar o toFixed() para indicar quantas casas decimas queremos*/
+      document.write(`${n1.toFixed(2)}<br/>`)
+      /*O atributo replace me parece somente funcionar junto com o toFixed*/
+      document.write(`${n1.toFixed(3).replace('.',',')}`)
+  </script>
+</body>
+</html>

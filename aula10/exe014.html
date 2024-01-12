@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        margin-top: 10px;
+      }
+
+      #res {
+        color: rgb(196, 193, 193);
+        border: 1px solid black;
+        font-size: 16px;
+        border-radius: 50%;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Somando Valores</h1>
+    <input type="number" id="txt1" /> +
+    <input type="number" id="txt2" />
+    <input type="button" value="soma" onclick="soma()"/>
+    <span id="res">resultado</span>
+
+    <script>
+      txt1 = document.getElementById("txt1")
+      txt2 = document.getElementById("txt2")
+      res = document.getElementById("res")
+
+      function soma() {
+        s = Number(txt1.value) + Number(txt2.value)
+        res.innerHTML = s
+      }
+    </script>
+  </body>
+</html>

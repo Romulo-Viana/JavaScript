@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        margin-left: 129px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Subtraindo Valores</h1>
+    <input type="number" id="n1"> 
+    <input type="number" id="n2"> =
+    <span>resultado</span>
+    <div>
+      <input type="button" id="sub" value="-">
+      <input type="button" id="somar" value="+">
+      <input type="button" id="mult" value="*">
+      <input type="button" id="divd" value="/">
+    </div>
+    
+
+    <script>
+      n1 = document.getElementById('n1')
+      n2 = document.getElementById('n2')
+      res = document.getElementsByTagName('span')[0]
+      sub = document.getElementById('sub')
+
+      //Evento add dentro do JavaScript
+      sub.addEventListener('click', subtrair)
+      somar.addEventListener('click', soma)
+      mult.addEventListener('click', mul)
+      divd.addEventListener('click', div)
+
+      function subtrair(){
+        s = Number(n1.value) - Number(n2.value)
+        res.innerText = s
+      }
+
+      function soma(){
+        s = Number(n1.value) + Number(n2.value)
+        res.innerText = s
+      }
+
+      function mul(){
+        s = Number(n1.value) * Number(n2.value)
+        res.innerText = s
+      }
+
+      function div(){
+        s = Number(n1.value) / Number(n2.value)
+        res.innerText = s
+      }
+    </script>
+  </body>
+</html>
