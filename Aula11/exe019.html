@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analisando Nacionalidades</title>
+  </head>
+  <body>
+    <h1>País de Origem</h1>
+    Qual seu país de origem? <input type="text" id="país" />
+    <input type="button" value="checando" onclick="checar()" />
+    <p id="res">resultado</p>
+
+    <script>
+      function checar() {
+        país = document.getElementById("país");
+        res = document.getElementById("res");
+
+        if (país == "Brasil") {
+          res.innerText = `<p>Você é brasileiro.<p/>`;
+        } else {
+          res.innerText = `<p>Você é estrangeiro.<p/>`;
+        }
+      }
+    </script>
+  </body>
+</html>
