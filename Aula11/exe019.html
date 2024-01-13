@@ -12,14 +12,15 @@
     <p id="res">resultado</p>
 
     <script>
+      país = document.getElementById("país");
+      res = document.getElementById("res");
+      
       function checar() {
-        país = document.getElementById("país");
-        res = document.getElementById("res");
-
-        if (país == "Brasil") {
-          res.innerText = `<p>Você é brasileiro.<p/>`;
+        var valorPais = país.value.toLowerCase();
+        if (valorPais === 'brasil' || valorPais === 'brazil' || valorPais === 'brasileiro' || valorPais === 'brazileiro') {
+          res.innerHTML = "<p>Você é brasileiro.</p>";
         } else {
-          res.innerText = `<p>Você é estrangeiro.<p/>`;
+          res.innerHTML = "<p>Você é estrangeiro.</p>";
         }
       }
     </script>
