@@ -1,18 +1,16 @@
 @charset "UTF-8";
 
-
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
-    background: #d4c291;
+    background: rgb(70, 142, 236);
+    font: Normal 20pt Arial;
 }
  
-header > h1 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 3em;
+header {
     color: white;
     text-align: center;
     margin: 30px 30px;
@@ -20,23 +18,21 @@ header > h1 {
 
 section {
     margin: auto;
-    height: 500px;
-    width: 800px;
+    padding: 15px;
+    width: 500px;
     background: white;
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.493);
     border-radius: 10px;
     
 }
 
-div > h2 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5em;
+#msg {
     text-align: center;
     padding-top: 25px;
     margin-bottom: 20px;
 }
 
-div > img {
+div > foto {
     height: 350px;
     width: 350px;
     border-radius: 50%;
@@ -49,4 +45,5 @@ footer > p {
     text-align: center;
     color: white;
     margin-top: 10px;
+    font-style: italic;
 }
