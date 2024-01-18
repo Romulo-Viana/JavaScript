@@ -12,19 +12,19 @@ function carregar(){
     
     if (hora >= 0 && hora < 12) {
         //BOM DIA
-        img.src = 'amanhecer_p.png'
+        img.src = './imagens/amanhecer_p.png'
         document.body.style.background = '#F2EBD5'
         meufooter.style.color = 'black'
         msg.innerHTML += `. BOM DIA!`
     } else if (hora >= 12 && hora <= 18){
         //BOA TARDE
-        img.src = 'entardecer_p.png'
+        img.src = './imagens/entardecer_p.png'
         document.body.style.background = '#C6582F'
         meufooter.style.color = 'white'
         msg.innerHTML += `. BOA TARDE!`
     } else {
         //BOA NOITE
-        img.src = 'anoitecer_p.png'
+        img.src = './imagens/anoitecer_p.png'
         document.body.style.background = '#242222'
         meufooter.style.color = 'white'
         msg.innerHTML += `. BOA NOITE!`
