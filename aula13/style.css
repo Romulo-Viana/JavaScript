@@ -8,42 +8,33 @@
 body {
     background: rgb(70, 142, 236);
     font: Normal 20pt Arial;
+    text-align: center;
 }
  
 header {
     color: white;
-    text-align: center;
     margin: 30px 30px;
 }
 
 section {
     margin: auto;
-    padding: 15px;
+    padding: 20px;
     width: 500px;
     background: white;
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.493);
     border-radius: 10px;
-    
 }
 
-#msg {
-    text-align: center;
-    padding-top: 25px;
-    margin-bottom: 20px;
+div {
+    padding: 10px;
 }
 
-div > foto {
-    height: 350px;
-    width: 350px;
-    border-radius: 50%;
-    position: relative;
-    left: 28%;
-    top: 5%;
-}
-
-footer > p {
-    text-align: center;
-    color: white;
-    margin-top: 10px;
+p {
+    font-size: 15pt;
+    margin-top: 15px;
     font-style: italic;
+}
+
+a {
+    text-decoration: none;
 }

@@ -1,23 +1,32 @@
 
 function carregar(){
-    msg = document.getElementById('msg')
-    img = document.getElementById('imagem')
-    data = new Date()
-    //hora = data.getHours()
-    hora = 19
-    msg.innerHTML = `Agora são ${hora} horas`
+    var msg = document.getElementById('msg')
+    var img = document.getElementById('imagem')
+    var meufooter = document.getElementById('meufooter')
+    var data = new Date()
+    var hora = data.getHours()
+
+    var saoHoras = (hora === 1)? 'hora' : 'horas';
+    
+    msg.innerHTML = `Agora são ${hora} ${saoHoras}`
     
     if (hora >= 0 && hora < 12) {
         //BOM DIA
-        img.src = 'amanhecer.png'
+        img.src = 'amanhecer_p.png'
         document.body.style.background = '#F2EBD5'
+        meufooter.style.color = 'black'
+        msg.innerHTML += `. BOM DIA!`
     } else if (hora >= 12 && hora <= 18){
         //BOA TARDE
-        img.src = 'entardecer.png'
+        img.src = 'entardecer_p.png'
         document.body.style.background = '#C6582F'
+        meufooter.style.color = 'white'
+        msg.innerHTML += `. BOA TARDE!`
     } else {
         //BOA NOITE
-        img.src = 'anoitecer.png'
-        document.body.style.background = '#262626'
+        img.src = 'anoitecer_p.png'
+        document.body.style.background = '#242222'
+        meufooter.style.color = 'white'
+        msg.innerHTML += `. BOA NOITE!`
     }
 }
