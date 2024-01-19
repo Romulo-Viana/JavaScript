@@ -11,8 +11,9 @@ var diaSem = agora.getDay()
     6 = SÁBADO
 */ 
 
+
 switch (diaSem) {
-    case 0: //CASE so funcionam com números inteiro e caractéres sem intervalos
+    case 0: //CASEs só funcionam com números inteiro e caractéres sem intervalos. (ex: A,B,C,D)
         console.log('Domingo')
         break
     case 1:
