@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comendo Pizza</title>
+</head>
+<body>
+    <header>
+        <h1>Contador de fatias de Pizza</h1>
+    </header>
+    <div id="res">
+        <input type="button" value="contar" onclick="fatias()">
+    </div>
+
+    <script>
+        function fatias(){
+            var c = 1
+            var pizza = 6
+            var res = document.getElementById('res')
+            var resultadoTexto = ''
+
+            while(pizza >= c){
+                resultadoTexto += `${pizza}<br>`
+                pizza -= 1
+                res.innerHTML = resultadoTexto
+            }
+
+        }
+    </script>
+</body>
+</html>
