@@ -20,4 +20,3 @@ while(6 >= c){
     console.log(c)
     c +=1
 }
-

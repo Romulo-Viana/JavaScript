@@ -1,5 +1,5 @@
 var agora = new Date()
-var diaSem = agora.getDay()
+var diaSemana = agora.getDay()
 
 /*
     0 = DOMINGO
@@ -12,8 +12,8 @@ var diaSem = agora.getDay()
 */ 
 
 
-switch (diaSem) {
-    case 0: //CASEs só funcionam com números inteiro e caractéres sem intervalos. (ex: A,B,C,D)
+switch (diaSemana) {
+    case 0: //CASEs só funcionam com números inteiro e caractéres sem intervalos. (ex: A,B,C,D...)
         console.log('Domingo')
         break
     case 1:
