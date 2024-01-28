@@ -3,27 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contador de Números</title>
+    <title>Tabuada</title>
     <link rel="stylesheet" href="estilo/style.css">
 </head>
 <body>
     <header>
-        <h1>Vamos contar</h1>
+        <h1>Tabuada</h1>
     </header>
 
     <section>
         <div>
-            <p>Início: <input type="number" name="nInício" id="nInício"></p>
-            
-            <p>Fim: <input type="number" name="nFim" id="nFim"></p>
-
-            <p>Passo:<input type="number" name="nPasso" id="nPasso"></p>
-            
-            <p><input type="button" value="contar" id="contar" onclick="contar()"></p>
+           Número: <input type="number" name="valor" id="valor">
+           <input type="button" value="Gerar Tabuada" onclick="gerar()">
         </div>
-
-        <div id="res">
-            <p>Preparando a contagem...</p>
+        <div>
+            <select name="tab" id="tabuada" size="10">
+                <option id="alerta">Digite um valor acima:</option>
+            </select>
         </div>
     </section>
 
