@@ -30,3 +30,26 @@ function adicionar(){
     addàlista.focus() // Dar foco ao input
 
 }  
+
+function pressEnter(event) {
+    if (event.key === 'Enter') {
+        adicionar();
+    }
+}
+
+function embaralhar() {
+    // Embaralhar a lista de participantes
+    for (let i = participantes.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [participantes[i], participantes[j]] = [participantes[j], participantes[i]];
+    }
+
+    // Dividir a lista de participantes em dois grupos
+    const metade = Math.ceil(participantes.length / 2);
+    const grupo1 = participantes.slice(0, metade);
+    const grupo2 = participantes.slice(metade);
+
+    // Exibir os dois grupos na página
+    const res = document.getElementById('res');
+    res.innerHTML = `Grupo 1: ${grupo1.join(', ')}<br>Grupo 2: ${grupo2.join(', ')}`;
+}

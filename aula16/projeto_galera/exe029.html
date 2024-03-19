@@ -13,14 +13,14 @@
 
     <section>
       <div>
-        Novo participante: <input type="text" name="txt1" id="txt1" />
+        Novo participante: <input type="text" name="txt1" id="txt1" onkeydown="pressEnter(event)" />
 
         <input type="button" value="Adicionar" onclick="adicionar()" />
 
         <select name="tabela" id="tabela" size="10"></select>
       </div>
 
-      <input type="button" value="Start" onclick="Finalizar()" />
+      <input type="button" value="Start" onclick="embaralhar()" />
       
       <div id="res"></div>
     </section>
