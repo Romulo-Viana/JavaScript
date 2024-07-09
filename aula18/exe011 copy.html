@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: flex; /*Define o elemento 'div' como um contêiner flexível*/
+            justify-content: center; /*Centraliza os itens (filhos diretos) horizontalmente.*/
+            align-items: center; /*Centraliza os itens (filhos diretos) verticalmente.*/
+            text-align: center;
+            background-color: green;
+            color: white;
+            height: 200px;
+            width: 200px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div>Click me</div>
+
+    <script>
+        var area = document.querySelector('div')
+        area.addEventListener('mouseout', Saiu)
+        area.addEventListener('mouseenter', Entrou)
+
+        //Está forma é exatamente igual as outras duas só que mais sucinta.
+        area.addEventListener('click', function() {
+            area.style.background = 'black'
+            area.innerHTML = 'Clicou!'
+        })
+        function Entrou(){
+            area.style.background = 'Blue'
+            area.innerHTML = 'Entrou'
+        }
+        function Saiu(){
+            area.style.background = 'green'
+            area.innerHTML = 'Saiu'
+        }
+    </script>
+</body>
+</html>
