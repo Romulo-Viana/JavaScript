@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Condições Simples</title>
+    <style>
+      strong#red {
+        color: red;
+      }
+
+      strong#green {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Medidor de Velocidade</h1>
+    Velocidade: <input type="number" name="" id="vel" />
+    <input type="button" value="calcular" onclick="calcular()" />
+    <div id="res">resultado</div>
+
+    <script>
+      var txt_res = document.getElementById("res");
+
+      //A variável vel_1 recebe diretamento o valor convertido para numérico.
+      function calcular() {
+        //O '+' converte valor de 'vel' para numérico.
+        let vel_1 = +document.getElementById("vel").value;
+
+        if (vel_1 > 60) {
+          txt_res.innerHTML = `<p>Sua velociadade é de <strong id="red">${vel_1}Km/h</strong>, acima do permitido.</p>`;
+        } else {
+          let vel_1 = +document.getElementById("vel").value;
+          txt_res.innerHTML = `<p>Sua velociadade é de <strong id="green">${vel_1}Km/h</strong>, dentro do permitido.</p>`;
+        }
+      }
+    </script>
+  </body>
+</html>

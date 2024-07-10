@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Condições Simples</title>
+    <style>
+      strong#red {
+        color: red;
+      }
+
+      strong#green {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Medidor de Velocidade</h1>
+    Velocidade: <input type="number" name="" id="vel" />
+    <input type="button" value="calcular" onclick="calcular()" />
+    <div id="res">resultado</div>
+
+    <script>
+      var txt_res = document.getElementById("res");
+
+      /*//Exemplo 1: Manipulação de dados tradicional
+      function calcular() {
+        //A variável vel_1 recebe string e é convertido para numérico dentro da variável vel_2.
+        let vel_1 = document.getElementById("vel");
+        let vel_2 = Number(vel_1.value);
+        if (vel_2 > 60) {
+          txt_res.innerHTML = `Sua velociadade é de ${vel_2}Km/h, acima do permitido.`;
+        }
+      }
+
+      
+      //___________________________________________________________________  
+      //Exemplo 2: A variável vel_1 recebe diretamento o valor convertido para numérico.
+      function calcular() {
+        //O '+' converte value de 'vel' de string para numérico.
+        let vel_1 = +document.getElementById("vel").value;
+
+        //Mensagem padrão
+        txt_res.innerHTML = `<p>Sua velocidade é de <strong id="green">${vel_1}Km/h</strong>, dentro do permitido.</p>`;
+
+        //Condição simples
+        if (vel_1 > 60) {
+          txt_res.innerHTML = `<p>Sua velociadade é de <strong id="red">${vel_1}Km/h</strong>, acima do permitido.</p>`;
+        }
+      }*/
+
+
+      //________________________________________________________________
+      //Em casos de condições simples, tbm podemos utilizar o operador ternario.
+      function calcular() {
+        let vel_1 = +document.getElementById("vel").value;
+
+        // condição ? "Expr1" : "Expr2"
+
+        //Condição
+        vel_1 > 60
+          ? //Expressão 1
+            (txt_res.innerHTML = `<p>Sua velocidade é de <strong id="red">${vel_1}Km/h</strong>, fora do permitido.</p>`)
+          : //Expressão 2
+            (txt_res.innerHTML = `<p>Sua velocidade é de <strong id="green">${vel_1}Km/h</strong>, dentro do permitido.</p>`);
+      }
+    </script>
+  </body>
+</html>
