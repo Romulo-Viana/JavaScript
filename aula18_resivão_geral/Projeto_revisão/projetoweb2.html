@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin-top: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: rgb(210, 238, 238);
+        text-align: center;
+        font-family: Georgia, "Times New Roman", Times, serif, Helvetica,
+          sans-serif;
+      }
+
+      header > h1 {
+        margin-top: 30px;
+      }
+
+      form {
+        margin: auto;
+        background-color: rgb(236, 231, 231);
+        width: 500px;
+        border-radius: 10px;
+        box-shadow: -1px -1px 8px rgba(0, 0, 0, 0.548);
+        padding: 20px;
+        text-align: center;
+      }
+      div {
+        padding: 20px;
+      }
+      footer {
+        margin-top: 30px;
+      }
+
+      input#ano_nsc::placeholder {
+        color: rgba(0, 0, 0, 0.219);
+      }
+
+      input#ano_nsc:not(:placeholder-shown) {
+        color: black;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>VERIFICADOR DE IDADE</h1>
+    </header>
+
+    <form>
+      <label for="ano_nsc">
+        <input
+          type="number"
+          name="ano_nsc"
+          id="ano_nsc"
+          value=""
+          placeholder="Ano de Nascimento"
+        />
+      </label>
+
+      <span>Sexo:</span>
+
+      <label for="checkedsexoM">
+        <input type="radio" name="sexo" checked /> Masculino
+      </label>
+
+      <label for="checkedsexoF">
+        <input type="radio" name="sexo" /> Feminino
+      </label>
+
+      <input type="button" value="VERIFICAR" onclick="verificar()" />
+
+      <img src="" alt="" id="imagens" />
+      <div id="res">Resultado da Pesquisa.</div>
+    </form>
+
+    <footer>
+      <a
+        href="https://www.youtube.com/watch?v=b2K7eo5Jdj8&themeRefresh=1"
+        target="_blank"
+        rel="external"
+        >&copy;CursoEmVideo</a
+      >
+    </footer>
+
+    <script>
+      function verificar() {
+        var agora = new Date();
+        var ano_atual = agora.getFullYear();
+
+        var img = document.getElementById("imagens");
+        var ano_nsc = +document.getElementById("ano_nsc").value;
+        var sexo = document.getElementsByName("sexo");
+        var res = document.getElementById("res");
+
+        var idade = ano_atual - ano_nsc;
+
+        if (ano_nsc > ano_atual) {
+          res.style.color = 'red'
+          res.innerHTML = "[ERRO] Digite uma data válida.";
+        } else {
+          if (sexo[0].checked) {
+            let genero = "Masculino";
+            res.innerHTML = genero;
+
+            if (idade <= 14) {
+              img.src = "imagens/menino.png";
+            } else if (idade < 30) {
+              img.src = "imagens/jovem_homem.png";
+            } else if (idade < 60) {
+              img.src = "imagens/adulto_homem.png";
+            } else {
+              img.src = "imagens/idoso.png";
+            }
+          }
+
+          if (sexo[1].checked) {
+            let genero = "Feminino";
+            res.innerHTML = genero;
+
+            if (idade <= 14) {
+              img.src = "imagens/menina.png";
+            } else if (idade < 30) {
+              img.src = "imagens/jovem_mulher.png";
+            } else if (idade < 60) {
+              img.src = "imagens/adulto_mulher.png";
+            } else {
+              img.src = "imagens/idosa.png";
+            }
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

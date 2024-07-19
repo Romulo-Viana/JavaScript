@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin-top: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: rgb(206, 202, 202);
+        text-align: center;
+        font-family: Georgia, "Times New Roman", Times, serif, Helvetica,
+          sans-serif;
+      }
+
+      header > h1 {
+        margin-top: 30px;
+      }
+
+      section {
+        margin: auto;
+        background-color: white;
+        width: 500px;
+        border-radius: 10px;
+        box-shadow: -1px -1px 8px rgba(0, 0, 0, 0.548);
+        padding: 20px;
+      }
+
+      #hora {
+        padding: 20px;
+      }
+
+      #imagen {
+        margin: 30px 0px;
+      }
+
+      footer {
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body onload="carregar()">
+    <header>
+      <h1>HORA DO DIA</h1>
+    </header>
+
+    <section>
+      <div id="hora">Hora certa!</div>
+
+      <div>
+        <img id="imagem" src="imagens/amanhecer_p.png" alt="foto_amanhecer" />
+      </div>
+    </section>
+
+    <footer>
+      <a
+        href="https://www.youtube.com/watch?v=b2K7eo5Jdj8&themeRefresh=1"
+        target="_blank"
+        rel="external"
+        >&copy;CursoEmVideo</a
+      >
+    </footer>
+
+    <script>
+      var res = document.getElementById("hora");
+      var img = document.getElementById("imagem");
+      var tag_h1 = document.getElementsByTagName("h1")[0];
+      var tag_a = document.getElementsByTagName("a")[0];
+      var agora = new Date();
+      var hora = agora.getHours()
+
+      var horas = (hora === 1) ? "hora" : "horas";
+
+      function carregar() {
+        if (hora < 12) {
+          res.innerHTML = `Agora são ${hora} ${horas}. BOM DIA!`;
+          img.src = `imagens/amanhecer_p.png`;
+          document.body.style.background = "#F2EBD5";
+        } else if (hora < 18) {
+          res.innerHTML = `Agora são ${hora} ${horas}. BOA TARDE!`;
+          img.src = `imagens/entardecer_p.png`;
+          document.body.style.background = `#df774f`;
+        } else {
+          res.innerHTML = `Agora são ${hora} ${horas}. BOA NOITE!`;
+          img.src = `imagens/anoitecer_p.png`;
+          document.body.style.background = `#242222`;
+          tag_h1.style.color = "white";
+          tag_a.style.color = "white";
+        }
+      }
+    </script>
+  </body>
+</html>

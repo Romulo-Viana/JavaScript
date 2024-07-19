@@ -36,12 +36,13 @@
       
       //___________________________________________________________________  
       //Exemplo 2: A variável vel_1 recebe diretamento o valor convertido para numérico.
+
       function calcular() {
         //O '+' converte value de 'vel' de string para numérico.
-        let vel_1 = +document.getElementById("vel").value;
+        let vel_1 = +document.getElementById("vel").value
 
         //Mensagem padrão
-        txt_res.innerHTML = `<p>Sua velocidade é de <strong id="green">${vel_1}Km/h</strong>, dentro do permitido.</p>`;
+        txt_res.innerHTML = `<p>Sua velocidade é de <strong id="green">${vel_1}Km/h</strong>, dentro do permitido.</p>`
 
         //Condição simples
         if (vel_1 > 60) {

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resultado dependendo da média</title>
+  </head>
+  <body>
+    <h1>MÉDIA ESCOLAR</h1>
+    Nota 1:
+    <div><input type="number" name="" id="txtnota1" /></div>
+
+    Nota 2:
+    <div><input type="number" name="" id="txtnota2" /></div>
+
+    <p><input type="button" value="calcular" onclick="calcular()" /></p>
+
+    <p id="resultado">Resultado</p>
+
+    <script>
+      var res = document.getElementById("resultado");
+
+      function calcular() {
+        var nota1 = +document.getElementById("txtnota1").value;
+        var nota2 = +document.getElementById("txtnota2").value;
+        let media = (nota1 + nota2) / 2;
+
+        switch (media) {
+          case 0:
+            res.innerHTML = `Média ${media}. Aluno não frequentou as aulas.`;
+            break;
+          case 1:
+            res.innerHTML = `Media ${media}. Aluno com muita dificuldade.`;
+            break;
+          case 2:
+            res.innerHTML = `Media ${media}. Aluno com muita dificuldade.`;
+            break;
+          case 3:
+            res.innerHTML = `Media ${media}. Aluno com muita dificuldade.`;
+            break;
+          default:
+            res.innerHTML = `Média não encontrada.`;
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>
